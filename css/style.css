@@ -560,6 +560,7 @@ h3.my-profession {
     overflow: hidden;
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
     border-radius: 12px;
+    background-color: rgba(243, 243, 243, 0.7); /* Similar to your first section */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -575,6 +576,7 @@ h3.my-profession {
     overflow: hidden;
 }
 
+/* Project title styles */
 .projects-item-inner p {
     position: absolute;
     top: 50%;
@@ -591,13 +593,17 @@ h3.my-profession {
 
 /* Image styles */
 .projects-img {
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100%;
-    height: 100%;
+    height: 300px; /* Fixed height for consistency */
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .projects-img img {
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -606,6 +612,7 @@ h3.my-profession {
 
 .projects-item:hover .projects-img img {
     transform: scale(1.1);
+    border-radius: 10px;
 }
 
 /* Hover effect for text */
