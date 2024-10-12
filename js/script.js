@@ -6,7 +6,7 @@ var typed = new Typed(".typing", {
     loop: true
 });
 
-/* Aside */
+/* Navbar*/
 const nav = document.querySelector(".nav"),
     navList = nav.querySelectorAll("li"),
     totalNavList = navList.length,
@@ -39,14 +39,14 @@ function showSection(element) {
 }
 
 const navTogglerBtn = document.querySelector(".nav-toggler"),
-    aside = document.querySelector(".aside");
+    navbar= document.querySelector(".navbar");
 
 navTogglerBtn.addEventListener("click", () => {
-    asideSectionTogglerBtn();
+    navbarSectionTogglerBtn();
 });
 
-function asideSectionTogglerBtn() {
-    aside.classList.toggle("open");
+function navbarSectionTogglerBtn() {
+    navbar.classList.toggle("open");
     navTogglerBtn.classList.toggle("open");
     for (let i = 0; i < totalSection; i++) {
         allSection[i].classList.toggle("open");

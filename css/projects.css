@@ -1,0 +1,80 @@
+.projects .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+.projects .section-title {
+    margin-left: 50px;
+}
+
+
+.projects-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border-radius: 12px;
+    background-color: rgba(243, 243, 243, 0.7); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.projects-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.projects-item-inner {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.projects-item-inner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.projects-img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 300px; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.projects-img img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.projects-item:hover .projects-img img {
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.projects-item:hover .projects-item-inner p {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.projects .container .more{
+    padding-top:250px;
+}
