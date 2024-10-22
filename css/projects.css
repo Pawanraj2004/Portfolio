@@ -78,3 +78,56 @@
 .projects .container .more{
     padding-top:250px;
 }
+
+@media (max-width: 480px) {
+    .projects .container {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 5px;
+    }
+
+    .projects-img {
+        height: 180px; 
+    }
+
+    .projects-item {
+        padding: 8px; 
+    }
+
+    .projects-item-inner p {
+        font-size: 1rem; 
+    }
+}
+@media (max-width: 1024px) {
+    .projects .container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+    }
+
+    .projects-img {
+        height: 250px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .projects .container {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 10px;
+    }
+
+    .projects-img {
+        height: 200px; 
+    }
+
+    .projects-item {
+        padding: 10px; 
+    }
+}
+
+@media (max-width: 767px) {
+    .projects.projects-item {
+        flex: 0 0 10%;
+        max-width: 100%;
+    }
+}
+

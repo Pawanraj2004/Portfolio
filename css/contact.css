@@ -1,4 +1,4 @@
-
+/* Contact Title */
 .contact-title {
     color: var(--skin-color);
     text-align: center;
@@ -6,38 +6,24 @@
     margin-bottom: 20px;
 }
 
-.contact-sub-title {
-    color: var(--text-black-900);
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 60px;
-}
-
+/* Contact Info Items */
 .contact .contact-info-item {
-    flex: 0 0 25%;
-    max-width: 25%;
+    flex: 0 0 33.33%; /* Adjust for better spacing on medium screens */
+    max-width: 33.33%;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px; /* Adjust spacing between items */
 }
 
-.contact .contact-info-item .icon {
-    display: inline-block;
-}
-
-.contact .contact-info-item .icon .fa {
-    font-size: 25px;
-    color: var(--skin-color);
-}
-
+.contact .contact-info-item .icon .fa,
 .contact .contact-info-item .icon .fa-brands {
     font-size: 25px;
     color: var(--skin-color);
 }
+
 .contact .contact-info-item h4 {
     font-size: 18px;
     font-weight: 700;
     color: var(--text-black-900);
-    text-transform: capitalize;
     margin: 15px 0 5px;
 }
 
@@ -48,6 +34,7 @@
     font-weight: 400;
 }
 
+/* Contact Form */
 .contact .contact-form {
     flex: 0 0 100%;
     max-width: 100%;
@@ -87,3 +74,17 @@
     height: 140px;
 }
 
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 767px) {
+    /* Full width for contact info items on smaller screens */
+    .contact .contact-info-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Full width for form items on smaller screens */
+    .contact .contact-form .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

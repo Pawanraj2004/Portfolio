@@ -1,10 +1,12 @@
+/* Home Section */
 .home {
     min-height: 100vh;
     display: flex;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     color: var(--text-black-900);
 }
 
+/* Home Info Section */
 .home .home-info {
     flex: 1 1 60%;
     max-width: 60%;
@@ -36,6 +38,35 @@ h3.my-profession {
     color: var(--text-black-700);
 }
 
+
+.home-img::after,
+.home-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.home-img::after {
+    border-bottom-color: var(--skin-color);
+    border-right-color: var(--skin-color);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    right: 5%;
+    bottom: -5%;
+}
+
+.home-img::before {
+    border-top-color: var(--skin-color);
+    border-left-color: var(--skin-color);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    left: 5%;
+    top: -5%;
+}
+
 .home .home-img {
     flex: 1 1 40%;
     max-width: 40%;
@@ -43,39 +74,19 @@ h3.my-profession {
     position: relative;
 }
 
-.home-img::after {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-}
-
-.home-img::before {
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
-}
-
 .home .home-img img {
-    height: 400px;
+    max-width: 250px;  /* Set a smaller max width */
+    height: auto;      /* Keep the height proportional */
     margin: auto;
     border-radius: 5px;
 }
 
+
+/* Social Icons */
 .social-icons {
     margin-top: 10%;
     margin-left: 83%;
     display: flex;
-    z-index: -10000;
 }
 
 .social-icons a {
@@ -83,3 +94,46 @@ h3.my-profession {
     margin-right: 20px;
 }
 
+/* Responsive Styling */
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .home .home-info,
+    .home .home-img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img img {
+        height: auto;
+        width: 100%;
+    }
+
+    .social-icons {
+        margin-left: 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .home {
+        flex-direction: column;
+    }
+
+    h3 {
+        order: -2;
+    }
+
+    .home .home-img {
+        order: -1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .home .home-info {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
